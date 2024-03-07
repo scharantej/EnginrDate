@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dating App with Engineering Calculator Integration</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Dating App with Engineering Calculator Integration</h1>
+<form action="/register" method="POST">
+<label for="username">Username:</label>
+<input type="text" name="username" id="username">
+<br>
+<label for="password">Password:</label>
+<input type="password" name="password" id="password">
+<br>
+<label for="technical_skills">Technical Skills:</label>
+<input type="text" name="technical_skills" id="technical_skills">
+<br>
+<label for="project_interests">Project Interests:</label>
+<input type="text" name="project_interests" id="project_interests">
+<br>
+<input type="submit" value="Register">
+</form>
+<br>
+<form action="/login" method="POST">
+<label for="username">Username:</label>
+<input type="text" name="username" id="username">
+<br>
+<label for="password">Password:</label>
+<input type="password" name="password" id="password">
+<br>
+<input type="submit" value="Login">
+</form>
+<br>
+<div>
+<h2>Potential Matches:</h2>
+<ul>
+{% for user in users %}
+<li><a href="/profile/{{ user.username }}">{{ user.username }}</a></li>
+{% endfor %}
+</ul>
+</div>
+</body>
+</html>
+
