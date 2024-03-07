@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Calculator</h1>
+<form action="/calculator" method="POST">
+<label for="expression">Expression:</label>
+<input type="text" name="expression" id="expression">
+<br>
+<input type="submit" value="Calculate">
+</form>
+<br>
+<div>
+<h2>Result:</h2>
+<p>{{ result }}</p>
+</div>
+</body>
+</html>
+
