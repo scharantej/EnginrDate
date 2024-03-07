@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Profile</h1>
+<div>
+<h2>{{ user.username }}</h2>
+<p>Technical Skills: {{ user.technical_skills }}</p>
+<p>Project Interests: {{ user.project_interests }}</p>
+</div>
+<br>
+<div>
+<h2>Compatibility:</h2>
+<ul>
+{% for compatibility in user.compatibility %}
+<li>{{ compatibility }}</li>
+{% endfor %}
+</ul>
+</div>
+<br>
+<div>
+<h2>Messages:</h2>
+<ul>
+{% for message in user.messages %}
+<li>{{ message }}</li>
+{% endfor %}
+</ul>
+</div>
+</body>
+</html>
+
