@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chat</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Chat</h1>
+<form action="/chat" method="POST">
+<label for="message">Message:</label>
+<input type="text" name="message" id="message">
+<br>
+<input type="submit" value="Send">
+</form>
+<br>
+<div>
+<h2>Messages:</h2>
+<ul>
+{% for message in messages %}
+<li>{{ message }}</li>
+{% endfor %}
+</ul>
+</div>
+</body>
+</html>
+
